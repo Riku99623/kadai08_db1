@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($fileName)){
         $postImageForSever = move_uploaded_file($_FILES["file"]["tmp_name"],$targetFilePath);
 
         if($postImageForSever){
-            $insert = $pdo->query("INSERT INTO gs_bm_table (Image_name) VALUES ('".$fileName."')");
+            $insert = $pdo->query("INSERT INTO tablename (Image_name) VALUES ('".$fileName."')");
         }
     }
 }
